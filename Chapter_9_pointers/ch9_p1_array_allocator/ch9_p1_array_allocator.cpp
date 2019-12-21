@@ -18,7 +18,8 @@ int main()
 	for (int count = 0; count < get_size; count++)
 		cout << arr[count] << " ";
 
-
+	delete[] arr;
+	arr = nullptr;
 }
 
 int* make_arr(int size)
