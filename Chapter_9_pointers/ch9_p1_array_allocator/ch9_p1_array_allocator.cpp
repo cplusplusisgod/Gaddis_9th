@@ -1,11 +1,35 @@
-// 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ch9_p1_array_allocator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
+using namespace std;
 
+int* make_arr(int);
 int main()
 {
-    std::cout << "Hello World!\n";
+	int get_size;
+	int* arr = nullptr;
+
+	cout << "Enter size:\n";
+	cin >> get_size;
+
+	arr = make_arr(get_size);
+	
+	for (int count = 0; count < get_size; count++)
+		cout << arr[count] << " ";
+
+
+}
+
+int* make_arr(int size)
+{
+	int* arr = nullptr;
+	arr = new int[size];
+	
+	for (int count = 0; count < size; count++)
+		arr[count] = (count + 1);
+
+	return arr;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
