@@ -1,4 +1,0 @@
-﻿  ch9_p9_MedianFunction.cpp
-C:\Users\laptop\source\repos\ch9_p9_MedianFunction\ch9_p9_MedianFunction\ch9_p9_MedianFunction.cpp(56,6): warning C4101: 'temp2': unreferenced local variable
-C:\Users\laptop\source\repos\ch9_p9_MedianFunction\ch9_p9_MedianFunction\ch9_p9_MedianFunction.cpp(55,6): warning C4101: 'temp': unreferenced local variable
-  ch9_p9_MedianFunction.vcxproj -> C:\Users\laptop\source\repos\ch9_p9_MedianFunction\Debug\ch9_p9_MedianFunction.exe
