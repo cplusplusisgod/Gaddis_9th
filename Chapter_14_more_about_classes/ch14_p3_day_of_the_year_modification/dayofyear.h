@@ -18,5 +18,8 @@ public:
 
   DayOfYear operator ++();
   DayOfYear operator ++(int);
+  DayOfYear operator --();
+  DayOfYear operator --(int);
+
 };
 #endif // DAYOFYEAR_H

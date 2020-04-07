@@ -102,5 +102,19 @@ for(int count = 0; count < 10; count++){
     std::cout<<"First.Datz = "<<First.PrintDayz()<<std::endl;
 }
 
+std::cout<<"Now testing the Prefix -- operator \n";
+for(int count = 0; count < 10; count++){
+    --First;
+   First.print();
+   std::cout<<First.PrintDayz()<<std::endl;
+}
+std::cout<<"Now testing the Postfix --\n";
+for(int count = 0; count < 15; count++)
+{
+    First--;
+    First.print();
+    std::cout<<First.PrintDayz()<<std::endl;
+}
+
     return 0;
 }
