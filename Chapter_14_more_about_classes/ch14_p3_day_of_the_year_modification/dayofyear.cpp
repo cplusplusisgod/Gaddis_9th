@@ -2,8 +2,6 @@
 #include <iostream>
 DayOfYear::DayOfYear(std::string month, int day, int monthNum, bool leapYear)
 {
-
-    //    std::cout << "when entering day is " << Dayz << std::endl;
     /*
      * If leapYear == true, adds 1 day to February.
      * If the value for day exceeds the number of days,
@@ -33,17 +31,27 @@ DayOfYear::DayOfYear(std::string month, int day, int monthNum, bool leapYear)
     MonthNum = monthNum;
     leap_year = leapYear;
     for (int count = 0; count < monthNum; count++) {
-        //std::cout<<"at "<<count<<" day is "<<Dayz<<std::endl;
         Dayz += MonthDays[count];
     }
     Dayz += day;
     std::cout << Dayz << std::endl;
 }
 
-//******************************************************************************************
-
 void DayOfYear::print()
 {
+    /*
+     * n is a pointer to the array MonthDays which holds the number of days in each month.
+     * d is a copy of Dayz, which is the day #of the year,
+     * (january 1st = 1, December 31st = 365 or 366)...ect
+     * The private varible Dayz is the sum of all the days in all
+     * the months up to the selected month, plus the days in that month
+     * upto the selected date day.
+     * Thus, the loop reverses this by subtracting the number of days value
+     * for each month from Dayz while the result is greater than 0. The number of
+     * times the loop occures (index) corolates with the placement in the months[] array
+     * which gives the name of the month for the selected date. The remainder (d) is
+     * the day of the month the selected date matches up to.
+    */
     int* n = MonthDays;
     int index = 0;
     int d = Dayz;
@@ -51,13 +59,8 @@ void DayOfYear::print()
         d -= *n;
         n++;
         index++;
-
-        //std::cout<<"here is D "<<d<<std::endl;
     }
-    //    std::cout << "here is D " << d << std::endl;
-    //    std::cout << "Index is " << index << std::endl;
-
-    std::cout << "SO will this work hmm Month = " << months[index] << " And day = " << d << std::endl;
+    std::cout << months[index] << " " << d;
 }
 
 DayOfYear DayOfYear::operator++()
@@ -98,7 +101,6 @@ DayOfYear DayOfYear::operator++(int)
     else
         Dayz++;
 
-    //std::cout<<"WORKING? copy DAYZ = "<<Temp.Dayz<<" and OG this = "<<this->Dayz<<std::endl;
     return Temp;
 }
 
@@ -127,20 +129,27 @@ DayOfYear DayOfYear::operator--()
 
 DayOfYear DayOfYear::operator--(int)
 {
-
+    /*
+     * Postfix --
+     * Makes a DayOfYear object copy (Temp) of the DayOfYear object being decremented (this).
+     * If Dayz is 1 (january 1st), it loops to the last day of year.
+     * Depending on if its a leap year or not the last day of the year
+     * will either be 365 or 366 (December 31st).
+     * else will just subtract 1 day from the date.
+     */
 
     DayOfYear Temp = *this;
 
-    if(Dayz == 1 && leap_year == true)
+    if (Dayz == 1 && leap_year == true)
         Dayz = 366;
-    else if(Dayz == 1 && leap_year == false)
+    else if (Dayz == 1 && leap_year == false)
         Dayz = 365;
     else
         Dayz--;
     return Temp;
 }
-
-//61 = march 1st (none ly)
+//monthDays is none static/const because February value needs to be flexible
 int DayOfYear::MonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//Static const array of month names.
 const std::string DayOfYear::months[] = { "January ", "February ", "March ", "April ", "May ",
     "June ", "July ", "August ", "September ", "October", "November", "December" };

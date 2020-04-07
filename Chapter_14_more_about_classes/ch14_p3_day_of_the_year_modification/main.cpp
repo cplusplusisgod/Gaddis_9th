@@ -11,7 +11,7 @@ using namespace std;
  message if the number entered for the day is outside the range of days for the given month
 */
 
-// Didnt see need to modify when this could be redone alot easier / shorter.
+// Didnt exactly followed the problem guide lines as i added more functuanlity and flexability.
 
 int main()
 {
@@ -83,38 +83,6 @@ int main()
     toupper(leap) == 'Y' ? leap_year = true : leap_year = false;
 
     DayOfYear First(Months[monthNum], usrDay, monthNum, leap_year);
-
-     std::cout<<"\nTesting default copy constructor with prefix ++\n";
-    for(int count = 0; count < 10; count++){
-    DayOfYear Second = ++First;
-
-    std::cout<<"Second.Dayz is = "<<Second.PrintDayz()<<" ";
-    std::cout<<"First.Dayz is = "<<First.PrintDayz()<<std::endl;
-    }
-    std::cout<<"\n\n";
-    std::cout<<"NOw testing the post fix ++\n";
-    std::cout<<"Second's Dayz should be +1 greater than First's Dayz\n";
-    DayOfYear Second = First;
-
-for(int count = 0; count < 10; count++){
-  Second = First++;
-    std::cout<<"Second.Dayz = "<<Second.PrintDayz()<<" ";
-    std::cout<<"First.Datz = "<<First.PrintDayz()<<std::endl;
-}
-
-std::cout<<"Now testing the Prefix -- operator \n";
-for(int count = 0; count < 10; count++){
-    --First;
-   First.print();
-   std::cout<<First.PrintDayz()<<std::endl;
-}
-std::cout<<"Now testing the Postfix --\n";
-for(int count = 0; count < 15; count++)
-{
-    First--;
-    First.print();
-    std::cout<<First.PrintDayz()<<std::endl;
-}
 
     return 0;
 }
