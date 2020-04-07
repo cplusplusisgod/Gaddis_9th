@@ -4,4 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        dayofyear.cpp \
         main.cpp
+
+HEADERS += \
+    dayofyear.h
