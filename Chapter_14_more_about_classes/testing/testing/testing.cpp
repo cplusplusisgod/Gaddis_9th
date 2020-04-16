@@ -3,9 +3,11 @@
 
 #include <iostream>
 //testing this
+//second test
 int main()
 {
     std::cout << "Hello World!\n";
+    std::cout << "second test";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
