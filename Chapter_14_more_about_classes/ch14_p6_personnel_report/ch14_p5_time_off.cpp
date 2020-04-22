@@ -1,12 +1,18 @@
-// test5.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ch14_p5_time_off.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include "NumDays.h"
+#include "TimeOff.h"
 #include <iostream>
-
+#include <string>
+using namespace std;
 int main()
 {
-    std::cout << "test?";
-    std::cout << "Hello World!\n";
+	TimeOff first;
+	int userInput;
+	cout << "Enter the number of months " << first.GetName() << " has worked for the company.\n Months: ";
+	cin >> userInput;
+	first.AdjustSickHrs(userInput * 8.0f);
+	first.AdjustVacationHrs(userInput * 12.0f);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
