@@ -9,5 +9,6 @@ private:
 public:
 	Month() { Name = "January", MonthNumber = 1; }
 	Month(std::string);
+	Month(int);
 };
 

@@ -1,12 +1,12 @@
 #include "Month.h"
 #include <iostream>
+#include <limits>
 #include <string>
 Month::Month(std::string name)
 {
 	std::string month_names[12] = { "January", "February", "March", "April", "May",
 	"June", "July", "August", "September", "October", "November", "December" };
 	std::string temp_1;
-	std::string temp_2;
 	bool found = false;
 	int month_num = 0;
 
@@ -75,5 +75,36 @@ Month::Month(std::string name)
 			}
 			//checking if match to a month name ends
 		}
+}
+
+Month::Month(int monthNum)
+{
+	// this array is not present in multible (2) constructors, there may be more practical way to implment.
+	std::string month_names[12] = { "January", "February", "March", "April", "May",
+	"June", "July", "August", "September", "October", "November", "December" };
+	 /*
+	  if the argument monthNum is not in the valid range for a month (1 - 12) active while loop to get a new valid argument.
+	  If while getting the new argument the user puts in somthing crazy like a char or space, the if(std::cin.fail()) statment
+	  will be triggered and clear then ignore the entire cin stream.
+	 */
+	while (monthNum < 1 || monthNum > 12 || std::cin.fail()) //the cin.fail() is just a catch all, possible not needed.
+	{
+		std::cout << "??";
+		if (std::cin.fail()) {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		std::cout << "Invalid month number. Value must be between 1 and 12. Try again\n";
+		std::cin >> monthNum;
+	}																	  
+
+	/*
+	 since the array starts at 0, must subtract 1 to match. ex: April is the
+     4th month of the year but is found in month_names[3]. Decemeber is the 12th
+     but found in month_names[11].
+    */
+	MonthNumber = monthNum;
+	Name = month_names[monthNum - 1];
+
 }
 

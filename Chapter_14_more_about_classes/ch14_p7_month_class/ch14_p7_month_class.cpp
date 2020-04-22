@@ -7,5 +7,7 @@
 using namespace std;
 int main()
 {
-	Month first("aPrI");
+	Month first(13);
+
+
 }
