@@ -7,7 +7,9 @@
 using namespace std;
 int main()
 {
-	Month first(13);
+	Month first("april");
+	first.setMonth(12);
+	first.setMonth("what");
 
 
 }

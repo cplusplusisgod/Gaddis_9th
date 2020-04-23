@@ -8,7 +8,10 @@ private:
 
 public:
 	Month() { Name = "January", MonthNumber = 1; }
-	Month(std::string);
-	Month(int);
+	Month(std::string s) { setMonth(s); } //setmonth is a overloaded function, one takes int one takes string
+	Month(int n) { setMonth(n); }
+	void setMonth(std::string);
+	void setMonth(int);
+	static const std::string monthz[12];
 };
 
