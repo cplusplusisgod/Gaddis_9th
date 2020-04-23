@@ -12,6 +12,11 @@ public:
 	Month(int n) { setMonth(n); }
 	void setMonth(std::string);
 	void setMonth(int);
+	void getMonthInfo();
 	static const std::string monthz[12];
+
+	//overloads
+	Month operator ++();
+	Month operator ++(int);
 };
 
