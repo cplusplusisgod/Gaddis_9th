@@ -1,8 +1,8 @@
 #include "Month.h"
 #include <iostream>
 #include <limits>
-#include <string>
 #include <memory>
+#include <sstream>
 const std::string Month::monthz[] = { "January", "February", "March",
 									  "April",   "May",      "June",
 									  "July",    "August",   "September",
@@ -112,16 +112,10 @@ Month::setMonth(int monthNum)
 	 4th month of the year but is found in month_names[3]. Decemeber is the 12th
 	 but found in month_names[11].
 	*/
+	std::cout << "SUCCESS!!!\n";
 	MonthNumber = monthNum;
 	Name = monthz[monthNum - 1];
 }
-
-
-void Month::getMonthInfo()
-{
-	std::cout << "Month: " << Name << "\nMonth #: " << MonthNumber << std::endl;
-}
-
 
 //************ OVERLOADED SECTION ***************
 
@@ -152,4 +146,63 @@ Month Month::operator++(int)
 
 }
 
+Month Month::operator--()
+{
 
+	if (MonthNumber == 1)
+		setMonth(12);
+	else
+		setMonth(MonthNumber - 1);
+
+	return *this;
+
+}
+
+Month Month::operator--(int)
+{
+
+	//use of unique_ptr probably not needed since it requires a include file just for it.
+	std::unique_ptr<Month> temp(new Month);
+	*temp = *this;
+
+	if (MonthNumber == 1)
+		setMonth(12);
+	else
+		setMonth(MonthNumber - 1);
+
+	return *temp;
+
+}
+
+std::ostream& operator << (std::ostream& strm, const Month& obj)
+{
+	strm << "Month: " << obj.Name << " #" << obj.MonthNumber;
+	return strm;
+}
+
+std::istream& operator >> (std::istream& strm, Month& obj)
+{
+	std::stringstream ss;
+	std::string input;
+	int num = 0;
+	
+	std::cout << "Enter either the name of the month or the months number (1 - 12)\n";
+	std::getline(std::cin,input);
+
+	ss << input;
+
+	if (ss >> num)
+	{
+		obj.setMonth(num);
+	}
+	else
+	{
+		obj.setMonth(input);
+	}
+
+	return strm;
+
+
+
+
+}

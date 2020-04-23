@@ -7,34 +7,7 @@
 using namespace std;
 int main()
 {
-	Month first;
-	Month second;
+	Month first(5);
 
-	
-	second = first++;
-	std::cout << "first ";
-	first.getMonthInfo();
-	std::cout << "Second ";
-	second.getMonthInfo();
-
-	std::cout << "\n***********************\n";
-
-
-
-
-	second = ++first;
-	std::cout << "first ";
-	first.getMonthInfo();
-	std::cout << "Second ";
-	second.getMonthInfo();
-	std::cout << "\n***********************\n";
-
-	second = first++;
-	std::cout << "first ";
-	first.getMonthInfo();
-	std::cout << "Second ";
-	second.getMonthInfo();
-
-	std::cout << "\n***********************\n";
-
+	cin >> first;
 }

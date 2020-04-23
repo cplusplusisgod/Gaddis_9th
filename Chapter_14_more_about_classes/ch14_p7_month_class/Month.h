@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 class Month
 {
 private:
@@ -12,11 +13,17 @@ public:
 	Month(int n) { setMonth(n); }
 	void setMonth(std::string);
 	void setMonth(int);
-	void getMonthInfo();
+	std::string getMonthName() { return Name; }
+	int getMonthNum() { return MonthNumber; }
 	static const std::string monthz[12];
 
 	//overloads
 	Month operator ++();
 	Month operator ++(int);
+	Month operator --();
+	Month operator --(int);
+
+	friend std::ostream& operator << (std::ostream&, const Month&);
+	friend std::istream& operator >> (std::istream&, Month&);
 };
 
