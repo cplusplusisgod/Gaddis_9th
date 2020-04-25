@@ -7,7 +7,8 @@
 using namespace std;
 int main()
 {
-	Month first(5);
+	Month first("december");
 
-	cin >> first;
+	
+
 }
