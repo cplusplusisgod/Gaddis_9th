@@ -45,37 +45,20 @@ void Validator(double& num, const std::string Q)
 {
 	std::string input;
 	bool valid;
-	double temp = 0;
-	int dotTrack = 0;
 
 	do {
 		valid = true;
-		temp = 0;
-		dotTrack = 0;
 		std::cout << Q << ": ";
 		std::getline(std::cin, input);
-		for (char C : input)
-		{
-			if (!isdigit(C))
-			{
-				if (C == '.' && dotTrack == 0 && C != input[0]) {
-					dotTrack += 1;
-				}
-				else {
-					valid = false; 
-				}
-			}
+		try {
+			num = std::stod(input);
 		}
-		if (valid == true)
-		{
-			temp = std::stod(input);  //conver the stringto a double
-			if (temp < 0)  //now see if its greater than 0 aka not negative
-				valid = false;
+		catch (std::invalid_argument) {
+			std::cout << "Invalid input. Try again.\n";
+			valid = false;
 		}
-		if (valid == false)  //added to 
-			std::cout << "Invalid input. Must be positive number. Try again.\n";
+		if (valid && num < 0)
+			valid = false;
 
-	} while (valid == false || std::cin.fail());
-	
-	num = temp; //after validating temp as a proper input, change nu which was passed by reference, to the valided number.
+	} while (valid == false);
 }
