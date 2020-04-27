@@ -9,7 +9,7 @@ public:
   Fuel_Gauge();
   Fuel_Gauge operator++();
   Fuel_Gauge operator--();
-  float fuel_report() const { return FuelAmt; }
+  int fuel_report() const { return FuelAmt; }
 };
 
 #endif // FUEL_GAUGE_H

@@ -10,7 +10,6 @@ Fuel_Gauge::operator++()
   } else {
     std::cout << "Fuel tank is full.\n";
   }
-
   return *this;
 }
 

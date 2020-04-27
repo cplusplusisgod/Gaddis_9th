@@ -8,18 +8,14 @@ Odometer::Odometer(Fuel_Gauge& f)
 Odometer
 Odometer::operator++()
 {
-  static int mpg_tracker = 0;
-  mpg_tracker += 1;
 
   if (Tank->fuel_report() != 0) {
+
     CurMileage >= 999999 ? CurMileage = 0 : CurMileage += 1;
 
-    if (mpg_tracker >= 24) {
-      --(*Tank);
-      mpg_tracker = 0;
+    if (CurMileage % 24 == 0) {
+      --(*Tank); // using the fuel_gauge operator overload --
     }
-  }
-  if (Tank->fuel_report() == 0) {
   }
 
   return *this;
