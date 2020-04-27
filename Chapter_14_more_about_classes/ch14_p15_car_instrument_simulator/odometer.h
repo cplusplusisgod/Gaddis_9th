@@ -12,7 +12,6 @@ public:
   Odometer(Fuel_Gauge&);
   int getCurMileage() const { return CurMileage; }
   Odometer operator++();
-  void test() { std::cout << Tank->fuel_report(); }
 };
 
 #endif // ODOMETER_H
