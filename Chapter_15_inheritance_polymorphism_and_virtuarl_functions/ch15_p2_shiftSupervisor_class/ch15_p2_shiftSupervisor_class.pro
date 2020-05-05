@@ -4,4 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        employee.cpp \
+        main.cpp \
+        productionworker.cpp \
+        shiftsupervisor.cpp
+
+HEADERS += \
+    employee.h \
+    productionworker.h \
+    shiftsupervisor.h
