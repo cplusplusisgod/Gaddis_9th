@@ -148,9 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ch15_p7_persondata_and_customerdata_class.cpp" />
+    <ClCompile Include="CustomerData.cpp" />
     <ClCompile Include="PersonData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomerData.h" />
     <ClInclude Include="PersonData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
