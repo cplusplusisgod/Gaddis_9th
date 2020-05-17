@@ -1,16 +1,21 @@
-// ch15_p7_persondata_and_customerdata_class.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ch15_p7_persondata_and_customerdata_class.cpp : This file contains the 'main'
+// function. Program execution begins and ends there.
 //
 
-#include <iostream>
 #include "PersonData.h"
+#include <iostream>
 
-int main()
+int
+main()
 {
 
-	PersonData first;
-	first.set_lastname("pa55l");
-	first.set_firstname("davidson");
-	//first.set_address();
-	first.set_address("5044");
-}
+  PersonData first;
+  std::cout << first.get_firstname() << std::endl;
+  std::cout << first.get_lastname() << std::endl;
+  std::cout << first.get_address() << std::endl;
+  std::cout << first.get_city() << std::endl;
+  std::cout << first.get_state() << std::endl;
+  std::cout << first.get_zip() << std::endl;
+  std::cout << first.get_phone() << std::endl;
 
+}
