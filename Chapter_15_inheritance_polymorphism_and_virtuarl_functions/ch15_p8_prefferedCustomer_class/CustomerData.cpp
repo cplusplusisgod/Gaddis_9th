@@ -1,9 +1,12 @@
 #include "CustomerData.h"
 #include <iostream>
+// tracks how many accounts have been made, used to give each a differnt id num.
 int CustomerData::CustomerNumberr = 0;
 
-CustomerData::CustomerData() {
+CustomerData::CustomerData()
+{
   CustomerNumberr++;
+  CustomerId = CustomerNumberr;
   set_mailingList();
 }
 
@@ -21,7 +24,6 @@ CustomerData::set_mailingList()
   } else {
     MailingList = false;
   }
-
 }
 
 std::string
@@ -32,5 +34,4 @@ CustomerData::get_mailingList()
   } else {
     return "Not signed up for Mailing list\n";
   }
-
 }
