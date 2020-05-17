@@ -318,7 +318,7 @@ PersonData::set_state()
 
     std::cout << "Enter State abbriviation (2 characters): ";
     std::getline(std::cin, state);
-    std::transform(state.begin(), state.end(),state.begin(),::toupper); 
+    std::transform(state.begin(), state.end(), state.begin(), ::toupper);
 
     for (std::string s : state_abbreviations) {
       if (s == state) {
@@ -553,7 +553,7 @@ PersonData::set_phone(std::string phone)
     }
   }
 
-    // test (3)
+  // test (3)
   // Takes the first 3 digits from the phone number inputted (which should be
   // the area code) and appends them to area_code Then it turns converts those
   // 3 characters into int's, to use for more testing.
@@ -573,7 +573,7 @@ PersonData::set_phone(std::string phone)
     }
   }
 
-  //test (4)
+  // test (4)
   // again if its passed all the previous test, check to see if its in a valid
   // range
   if (valid) {
