@@ -1,6 +1,6 @@
 #include "cruiseship.h"
 
-cruiseship::cruiseship()
+cruiseship::cruiseship(int max = 0)
 {
-
+  MaxPassangers = max;
 }

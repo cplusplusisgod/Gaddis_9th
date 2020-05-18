@@ -2,5 +2,6 @@
 
 ship::ship()
 {
-
+  Name = "void";
+  Year = "void";
 }
