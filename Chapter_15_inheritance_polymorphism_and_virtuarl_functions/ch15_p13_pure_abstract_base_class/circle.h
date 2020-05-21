@@ -12,7 +12,7 @@ private:
 public:
   circle(long, long, double);
   void calcArea() override { Area = 3.14159 * Radius * Radius; }
-  double get_area() { return Area; }
+  // double get_area() { return Area; }
 };
 
 #endif // CIRCLE_H

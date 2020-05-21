@@ -8,9 +8,9 @@ main()
 {
 
   circle circle_obj(5, 5, 5);
-  std::cout << circle_obj.get_area() << std::endl;
+  std::cout << circle_obj.getArea() << std::endl;
 
   rectangle rectangle_obj(5, 5);
-  std::cout << rectangle_obj.get_area() << std::endl;
+  std::cout << rectangle_obj.getArea() << std::endl;
   return 0;
 }
