@@ -17,8 +17,8 @@ public:
     int get_hrs_left() const { return Required_Hrs;}
 
     void set_monthly_bonus();
-    void set_required_hrs();
-    void set_compelted_hrs();
+//    void set_required_hrs(); //dont thiknk i need these 2. will see
+//    void set_compelted_hrs();
 };
 
 #endif // TEAMLEADER_H

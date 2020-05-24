@@ -13,12 +13,13 @@ void TeamLeader::set_monthly_bonus()
 {
     double amnt = 0;
     do{
-        std::cin.clear();
-        std::cin.ignore(10000,'\n');
+    std::cin.clear();
+    std::cin.ignore(10000,'\n');
     std::cout<<"How much is the monthly bonus for "<<employeeName<<": ";
     std::cin>>amnt;
     }while(std::cin.fail());
 }
+
 
 
 
