@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch16_p7_testscore_class\Debug\ch16_p7_testscore_class.exe
+C:\Users\laptop\source\repos\ch16_p7_testscore_class\Debug\ch16_p7_testscore_class.pdb

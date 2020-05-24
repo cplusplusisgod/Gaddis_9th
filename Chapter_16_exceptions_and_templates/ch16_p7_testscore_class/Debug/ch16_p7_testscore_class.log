@@ -1,0 +1,5 @@
+﻿  ch16_p7_testscore_class.cpp
+C:\Users\laptop\source\repos\ch16_p7_testscore_class\ch16_p7_testscore_class.cpp(37,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\laptop\source\repos\ch16_p7_testscore_class\ch16_p7_testscore_class.cpp(60,39): warning C4101: 'error': unreferenced local variable
+C:\Users\laptop\source\repos\ch16_p7_testscore_class\ch16_p7_testscore_class.cpp(95,40): warning C4101: 'error': unreferenced local variable
+  ch16_p7_testscore_class.vcxproj -> C:\Users\laptop\source\repos\ch16_p7_testscore_class\Debug\ch16_p7_testscore_class.exe
