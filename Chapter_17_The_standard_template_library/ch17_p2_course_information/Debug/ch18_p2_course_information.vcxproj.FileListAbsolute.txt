@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch18_p2_course_information\Debug\ch18_p2_course_information.exe
+C:\Users\laptop\source\repos\ch18_p2_course_information\Debug\ch18_p2_course_information.pdb

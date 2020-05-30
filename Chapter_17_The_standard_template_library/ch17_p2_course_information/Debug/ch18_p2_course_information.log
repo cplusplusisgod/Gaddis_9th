@@ -1,0 +1,3 @@
+﻿  ch18_p2_course_information.cpp
+C:\Users\laptop\source\repos\ch18_p2_course_information\ch18_p2_course_information.cpp(59,7): warning C4101: 'not_valid': unreferenced local variable
+  ch18_p2_course_information.vcxproj -> C:\Users\laptop\source\repos\ch18_p2_course_information\Debug\ch18_p2_course_information.exe
