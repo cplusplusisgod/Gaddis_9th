@@ -1,0 +1,4 @@
+﻿  ch17_p3_capital_quiz.cpp
+C:\Users\laptop\source\repos\ch17_p3_capital_quiz\ch17_p3_capital_quiz.cpp(24,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\laptop\source\repos\ch17_p3_capital_quiz\ch17_p3_capital_quiz.cpp(74,28): warning C4018: '<': signed/unsigned mismatch
+  ch17_p3_capital_quiz.vcxproj -> C:\Users\laptop\source\repos\ch17_p3_capital_quiz\Debug\ch17_p3_capital_quiz.exe

@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch17_p3_capital_quiz\Debug\ch17_p3_capital_quiz.exe
+C:\Users\laptop\source\repos\ch17_p3_capital_quiz\Debug\ch17_p3_capital_quiz.pdb
