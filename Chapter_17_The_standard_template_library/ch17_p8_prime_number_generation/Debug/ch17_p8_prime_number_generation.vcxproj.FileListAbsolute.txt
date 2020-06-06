@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch17_p8_prime_number_generation\Debug\ch17_p8_prime_number_generation.exe
+C:\Users\laptop\source\repos\ch17_p8_prime_number_generation\Debug\ch17_p8_prime_number_generation.pdb

@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch18_p1_Your_own_linked_list\Debug\ch18_p1_Your_own_linked_list.exe
+C:\Users\laptop\source\repos\ch18_p1_Your_own_linked_list\Debug\ch18_p1_Your_own_linked_list.pdb
