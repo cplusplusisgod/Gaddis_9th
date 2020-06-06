@@ -10,7 +10,7 @@ int main()
 	FeetInches distance2(6, 8); // 6 feet 8 inches
 	FeetInches distance3(8, 9); // 8 feet 9 inches
 
-	NumberList<int> container;
+	LinkedList<int> container;
 	container.appendNode(1);
 	container.appendNode(2);
 	container.appendNode(3);
@@ -27,7 +27,7 @@ int main()
 	container.displayList();
 
 	cout << "Now making a copy of the first container and outputting the new containers values. should be 1,2,2,3\n";
-	NumberList<int> container2(container);
+	LinkedList<int> container2(container);
 	container2.displayList();
 	cout << "Now reversing the second container.\n";
 	container2.reverse();
@@ -56,7 +56,7 @@ int main()
 	container2.deleteAtPos(5);
 	container2.displayList();
 	cout << "\t***** Now making containers using the class FeetInches as the type *****\n";
-	NumberList<FeetInches> container3;
+	LinkedList<FeetInches> container3;
 	container3.appendNode(distance1);
 	container3.appendNode(distance2);
 	container3.appendNode(distance3);

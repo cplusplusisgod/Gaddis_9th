@@ -11,15 +11,15 @@ public:
 
 
 template <class T>
-class NumberList
+class LinkedList
 {
 private:
 	ListNode<T>* head = nullptr;
 public:
 
-	NumberList() { head = nullptr; } //compiler complains if its not also set to nullptr in its declaration /shrug
-	~NumberList();
-	NumberList<T>(const NumberList<T>&);
+	LinkedList() { head = nullptr; } //compiler complains if its not also set to nullptr in its declaration /shrug
+	~LinkedList();
+	LinkedList<T>(const LinkedList<T>&);
 	//ListNode<T>* head;
 	void appendNode(T);
 	void insertNode(T);
@@ -34,7 +34,7 @@ public:
 
 //copy constructor.
 template <class T>
-NumberList<T>::NumberList(const NumberList<T>& obj)
+LinkedList<T>::LinkedList(const LinkedList<T>& obj)
 {
 	ListNode<T>* nodePtr = obj.head;
 	while (nodePtr)
@@ -45,7 +45,7 @@ NumberList<T>::NumberList(const NumberList<T>& obj)
 }
 
 template <class T>
-void NumberList<T>::appendNode(T num)
+void LinkedList<T>::appendNode(T num)
 {
 	ListNode<T>* newNode;  // To point to a new node
 	ListNode<T>* nodePtr;  // To move through the list
@@ -74,7 +74,7 @@ void NumberList<T>::appendNode(T num)
 }
 
 template <class T>
-void NumberList<T>::insertNode(T newValue)
+void LinkedList<T>::insertNode(T newValue)
 {
 	ListNode<T>* newNode;
 	ListNode<T>* nodePtr;
@@ -113,7 +113,7 @@ void NumberList<T>::insertNode(T newValue)
 }
 
 template <class T>
-void NumberList<T>::deleteNode(T num)
+void LinkedList<T>::deleteNode(T num)
 {
 	ListNode<T>* nodePtr;
 	ListNode<T>* previousNode = nullptr;
@@ -144,7 +144,7 @@ void NumberList<T>::deleteNode(T num)
 }
 
 template <class T>
-void NumberList<T>::displayList() const
+void LinkedList<T>::displayList() const
 {
 	ListNode<T>* nodePtr;
 	nodePtr = head;
@@ -156,7 +156,7 @@ void NumberList<T>::displayList() const
 }
 
 template <class T>
-void NumberList<T>::reverse()
+void LinkedList<T>::reverse()
 {
 	ListNode<T>* curNode = head;
 	ListNode<T>* prevNode = nullptr;
@@ -178,7 +178,7 @@ void NumberList<T>::reverse()
 }
 
 template <class T>
-int NumberList<T>::search(T num)
+int LinkedList<T>::search(T num)
 {
 	int count = 0;
 	ListNode<T>* nodePtr = head;
@@ -199,7 +199,7 @@ int NumberList<T>::search(T num)
 }
 
 template <class T>
-void NumberList<T>::insertAtPos(int pos, T num)
+void LinkedList<T>::insertAtPos(int pos, T num)
 {
 	int count = 0;
 	ListNode<T>* nodePtr = head;
@@ -235,7 +235,7 @@ void NumberList<T>::insertAtPos(int pos, T num)
 }
 
 template <class T>
-void NumberList<T>::deleteAtPos(int pos)
+void LinkedList<T>::deleteAtPos(int pos)
 {
 	int count = 0;
 	ListNode<T>* nodePtr = head;
@@ -272,7 +272,7 @@ void NumberList<T>::deleteAtPos(int pos)
 }
 
 template <class T>
-NumberList<T>::~NumberList() {
+LinkedList<T>::~LinkedList() {
 
 	ListNode<T>* nodePtr;
 	ListNode<T>* nextNode;
