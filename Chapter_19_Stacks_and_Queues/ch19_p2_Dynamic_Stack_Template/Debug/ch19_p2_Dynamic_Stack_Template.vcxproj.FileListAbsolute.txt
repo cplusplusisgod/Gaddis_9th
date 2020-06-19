@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch19_p2_Dynamic_Stack_Template\Debug\ch19_p2_Dynamic_Stack_Template.exe
+C:\Users\laptop\source\repos\ch19_p2_Dynamic_Stack_Template\Debug\ch19_p2_Dynamic_Stack_Template.pdb
