@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\p1_static_stack_template\Debug\p1_static_stack_template.exe
+C:\Users\laptop\source\repos\p1_static_stack_template\Debug\p1_static_stack_template.pdb

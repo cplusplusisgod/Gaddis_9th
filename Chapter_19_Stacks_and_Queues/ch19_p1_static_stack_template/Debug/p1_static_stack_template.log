@@ -1,0 +1,8 @@
+﻿  p1_static_stack_template.cpp
+C:\Users\laptop\source\repos\p1_static_stack_template\Stack.h(22,1): warning C4812: obsolete declaration style: please use 'Stack<T>::Stack' instead
+C:\Users\laptop\source\repos\p1_static_stack_template\Stack.h(22,1): warning C4812: obsolete declaration style: please use 'Stack<std::string>::Stack' instead
+C:\Users\laptop\source\repos\p1_static_stack_template\Stack.h(23): message : while compiling class template member function 'Stack<std::string>::Stack(int)'
+C:\Users\laptop\source\repos\p1_static_stack_template\p1_static_stack_template.cpp(12): message : see reference to function template instantiation 'Stack<std::string>::Stack(int)' being compiled
+C:\Users\laptop\source\repos\p1_static_stack_template\p1_static_stack_template.cpp(12): message : see reference to class template instantiation 'Stack<std::string>' being compiled
+C:\Users\laptop\source\repos\p1_static_stack_template\Stack.h(83): warning C4715: 'Stack<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::pop': not all control paths return a value
+  p1_static_stack_template.vcxproj -> C:\Users\laptop\source\repos\p1_static_stack_template\Debug\p1_static_stack_template.exe
