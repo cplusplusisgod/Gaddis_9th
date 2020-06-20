@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch19_p3_static_queue_template\Debug\ch19_p3_static_queue_template.exe
+C:\Users\laptop\source\repos\ch19_p3_static_queue_template\Debug\ch19_p3_static_queue_template.pdb
