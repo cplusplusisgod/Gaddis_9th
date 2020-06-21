@@ -1,0 +1,2 @@
+C:\Users\laptop\source\repos\ch19_p7_dynamic_mathstack\Debug\ch19_p7_dynamic_mathstack.exe
+C:\Users\laptop\source\repos\ch19_p7_dynamic_mathstack\Debug\ch19_p7_dynamic_mathstack.pdb
