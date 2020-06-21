@@ -12,6 +12,9 @@ public:
    // MathStack operations
    void add();
    void sub();
-   //void mult();
+   void mult();
+   void div();
+   void addAll();
+   void multAll();
 };
 #endif

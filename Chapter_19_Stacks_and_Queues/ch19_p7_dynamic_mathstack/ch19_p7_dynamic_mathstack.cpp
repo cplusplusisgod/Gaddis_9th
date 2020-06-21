@@ -7,6 +7,7 @@ int main()
 { 
 	int temp;
 	MathStack stack(2);
+	MathStack stack2(4);
 	stack.push(5);
 	stack.push(4);
 	stack.add();
@@ -18,18 +19,35 @@ int main()
 	stack.add();
 	stack.pop(temp);
 	cout << temp << endl;
+	stack.push(5);
+	stack.push(5);
+	stack.mult();
+	stack.pop(temp);
+	cout << temp << endl;
+	stack.push(10);
+	stack.push(5);
+	stack.div();
+	stack.pop(temp);
+	cout << temp << endl;
+	cout << "here\n";
+	stack2.push(2);
+	stack2.push(2);
+	stack2.push(2);
+	stack2.push(2);
+	stack2.push(2);
+	stack2.addAll();
+	stack2.pop(temp);
+	cout << temp << endl;
+	stack2.push(5);
+	stack2.push(5);
+	stack2.push(2);
+	stack2.push(2);
+	stack2.multAll();
+	stack2.pop(temp);
+	cout << temp << endl;
+	stack2.pop(temp);
+
 
 	//stack.pop(temp);
 	//cout << temp;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

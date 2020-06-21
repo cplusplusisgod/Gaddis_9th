@@ -55,3 +55,77 @@ void MathStack::sub()
 		std::cout << "Less then 2 objs in stack. Cannot subtract.\n";
 	}
 }
+
+void MathStack::mult()
+{
+	if (getSize() > 0)
+	{
+		int num, sum;
+		pop(num);
+		pop(sum);
+
+		sum *= num;
+
+		push(sum);
+	}
+	else
+	{
+		std::cout << "Error! less then 2 objs on the stack.\n";
+	}
+}
+
+void MathStack::div()
+{
+	if (getSize() > 0)
+	{
+		int num, result;
+
+		pop(num);
+		pop(result);
+
+		result /= num;
+
+		push(result);
+	}
+	else
+	{
+		std::cout << "Error! Less then 2 objs on the stack.\n";
+	}
+}
+
+void MathStack::addAll()
+{
+	if (getSize() > 0)
+	{
+		int num = 0, sum = 0;
+
+		while (!isEmpty())
+		{
+			pop(num);
+			sum += num;
+		}
+		push(sum);
+	}
+	else
+	{
+		std::cout << "Error! Less then 2 objs on the stack.\n";
+	}
+}
+
+void MathStack::multAll() {
+	if (getSize() > 0)
+	{
+		int num = 0, sum = 1;
+
+		while (!isEmpty())
+		{
+			pop(num);
+			sum *= num;
+		}
+		push(sum);
+	}
+	else
+	{
+		std::cout << "Error! Less then 2 objs on the stack.\n";
+	}
+}
